@@ -1,7 +1,7 @@
 # Awesome-Semantic-Search-Platform
 
 Markdown
-# Top Semantic Search Platform Ecosystem
+## Top Semantic Search Platform Ecosystem
 
 
 **Curated List of SaaS/Hosted Platforms & Open-Source GitHub Projects**  
