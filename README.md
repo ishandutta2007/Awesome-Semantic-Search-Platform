@@ -42,45 +42,22 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-- **[Algolia](https://www.algolia.com/)**  
-  API-first search and discovery platform for websites and applications, providing typo tolerance, autocomplete, faceting, personalization, analytics, merchandising, AI ranking, and semantic/hybrid search.
-
-
-- **[Algolia NeuralSearch](https://www.algolia.com/products/features/neuralsearch)**  
-  Algolia's hybrid semantic search capability combining keyword matching with vector-based semantic retrieval and neural ranking. NeuralSearch blends keyword and semantic scores to improve relevance for natural-language queries. :contentReference[oaicite:1]{index=1}
-
-
-- **[Elasticsearch](https://www.elastic.co/elasticsearch)**  
-  Distributed search and analytics engine supporting full-text search, vector search, hybrid retrieval, relevance ranking, and AI-powered search applications.
-
-
-- **[Elastic AI Search](https://www.elastic.co/enterprise-search)**  
-  Elastic's AI-oriented search ecosystem combining lexical search, vector search, semantic retrieval, relevance tuning, and generative AI applications.
-
-
-- **[Meilisearch](https://www.meilisearch.com/)**  
-  Developer-friendly search engine focused on fast full-text search, typo tolerance, filtering, ranking, and increasingly hybrid/semantic search.
-
-
-- **[Coveo](https://www.coveo.com/)**  
-  Enterprise AI search and relevance platform providing semantic understanding, personalization, recommendations, generative AI, and relevance optimization.
-
-
-- **[Glean](https://www.glean.com/)**  
-  Enterprise AI search and knowledge platform connecting information across organizational applications and using semantic understanding to retrieve relevant company knowledge.
-
-
-- **[Typesense](https://typesense.org/)**  
-  Open-source search engine optimized for typo-tolerant instant search, with vector search, semantic/hybrid search, conversational search, and natural-language query understanding. :contentReference[oaicite:2]{index=2}
-
-
-- **[Azure AI Search](https://azure.microsoft.com/products/ai-services/ai-search)**  
-  Microsoft's cloud search service supporting keyword, vector, hybrid, semantic ranking, filters, enrichment, and RAG-oriented retrieval pipelines.
-
-
-- **[Vespa](https://vespa.ai/)**  
-  Search and recommendation engine designed for large-scale real-time serving, combining lexical retrieval, vector search, ranking, machine learning, and structured data.
+| Platform / Product | Description | Pricing (Starting Tier) | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Algolia](https://www.algolia.com/)** | API-first search and discovery platform providing typo tolerance, autocomplete, faceting, personalization, and hybrid search. | **Grow Plan:** $0.50 per 1,000 search requests (includes 100k records; additional records at $0.40/1k records/mo); **Grow Plus:** $1.75 per 1,000 requests | **Free Forever ("Build" Plan):** 10,000 search requests/month, 50,000 records, 5,000 recommendation requests/month, 1 GB data limit, max 10 KB per record |
+| **[Algolia NeuralSearch](https://www.algolia.com/products/features/neuralsearch)** | Hybrid semantic search combining keyword matching with vector-based retrieval and neural ranking. | **Elevate / Premium Tier:** Custom annual enterprise contracts starting at ~$50,000/year (includes NeuralSearch indexing & query pipeline) | **Free Forever ("Build" Plan):** 10,000 search requests/month (keyword/hybrid sandbox); 14-day dedicated AI Search trial upon request |
+| **[Elasticsearch (Elastic Cloud)](https://www.elastic.co/elasticsearch)** | Distributed search and analytics engine supporting full-text, dense/sparse vector search, hybrid retrieval, and AI search. | **Standard Tier:** Starts at ~$95 – $99/month (~$0.133/hour for entry-level 120 GB storage across 2 AZs); scales with provisioned RAM, vCPU, and storage | **14-Day Free Trial:** 1 hosted deployment (up to 8 GB RAM across 2 AZs), 3 Serverless projects, no credit card required (extendable by 7 days) |
+| **[Elastic AI Search](https://www.elastic.co/enterprise-search)** | Elastic's AI-oriented search ecosystem with lexical + vector search, ELSER semantic models, and generative AI retrieval. | **Standard Tier:** ~$99/month; **Platinum Tier** (includes proprietary ELSER semantic models and ML inference): Starts at ~$125/month (~$0.175/hr) | **14-Day Free Trial:** Full access to vector search, semantic ELSER model deployment, 1 deployment up to 8 GB RAM, 3 Serverless projects |
+| **[Meilisearch Cloud](https://www.meilisearch.com/)** | Fully managed, developer-friendly search engine with typo tolerance, instant search-as-you-type, and hybrid/vector capabilities. | **Build Plan:** Starts at $30/month (usage/resource-based); **Pro Plan:** Starts at $300/month for production scaling | **14-Day Free Trial:** Full platform access with no credit card required; engine limits allow up to ~4.3B docs/index and 20 MB web upload limit (Open-source is free forever self-hosted) |
+| **[Coveo](https://www.coveo.com/)** | Enterprise AI search and relevance platform delivering semantic understanding, personalization, and generative answering. | **Base / Pro Tier:** Annual contracts starting at ~$2,500/month (~$30,000/year) based on 100,000 queries/month entitlement | **14-Day Free Trial:** Full prototype organization access with standard connectors and ML models; no credit card required (30-day POC for qualified enterprises) |
+| **[Glean](https://www.glean.com/)** | Enterprise AI search and work assistant connecting knowledge across all SaaS tools with semantic understanding and permissions. | **Enterprise Tier:** Starts at ~$50 – $75 per user/month with standard 100-seat minimum commitment (~$50,000 – $60,000/year ACV) + optional $15/user/month AI add-on | **Guided POC (14 to 30 Days):** No self-serve free tier; provides a guided 14–30 day enterprise sandbox evaluation with connected data sources upon sales qualification |
+| **[Typesense Cloud](https://typesense.org/)** | Managed instant search engine optimized for fast typo tolerance, vector search, conversational search, and hybrid retrieval. | **Dedicated Nodes:** Starts at ~$7.00 – $7.20/month (~$0.01/hour for 0.5 GB RAM / 1 vCPU entry node); scales with RAM, vCPU, and storage | **30-Day / 720-Hour Free Trial:** Includes 720 hours of cluster runtime and 10 GB outbound bandwidth (one-time allowance; Open-source version is free forever self-hosted) |
+| **[Azure AI Search](https://azure.microsoft.com/products/ai-services/ai-search)** | Cloud search service supporting keyword, dense/sparse vector search, hybrid retrieval, and semantic reranking. | **Basic Tier:** Starts at ~$73.73/month (~$0.101/hour per Search Unit: 1 replica × 1 partition, 2 GB storage, up to 15 indexes); **Standard S1:** ~$245/month | **Free Tier (Free Forever):** 50 MB total storage, up to 3 indexes, 1 free search service per Azure subscription (shared infrastructure, excludes semantic ranker) |
+| **[Vespa Cloud](https://vespa.ai/)** | Managed real-time big data search and recommendation engine combining lexical search, vector search, ColBERT, and tensor evaluations. | **Resource-Based Rates:** $0.18/vCPU-hour + $0.018/GB RAM-hour + $0.0007/GB disk-hour (typical entry-level cluster starts at ~$30 – $50/month with autoscaling) | **Free Trial with $300 Credits:** $300 in free cloud usage credits, no credit card required (stops automatically when credits expire; Core engine is Apache 2.0 open-source) |
+| **[Marqo Cloud](https://marqo.ai/)** | AI-native vector and multimodal search engine providing end-to-end embedding generation, tensor search, and hybrid ranking. | **Starter Tier:** Starts at ~$0.15/hour (~$108/month) for a dedicated single-replica vector search instance | **Free Evaluation / Sandbox:** $50 free cloud credits or 30-day evaluation with up to 100,000 embeddings (Open-source engine is free forever under Apache 2.0) |
+| **[Yext Search](https://www.yext.com/)** | AI-led search platform utilizing knowledge graphs to provide direct, natural-language answers across websites and apps. | **Essential Tier:** Starts at ~$199 per location/year (~$16.50/month); Enterprise search deployments start at ~$1,500 – $2,000/month | **14-Day Interactive Sandbox/Trial:** Available via sales-assisted demo request with sample Knowledge Graph configurations and search UI testing |
+| **[Lucidworks Fusion / Springboard](https://lucidworks.com/)** | Enterprise search and AI platform combining Apache Solr, neural hybrid search, ML relevance tuning, and generative answers. | **Enterprise Contracts:** Starts at ~$2,500 – $3,500/month (~$30,000 – $42,000/year) based on indexed document volume and search traffic | **14-to-30-Day Guided POC:** Custom enterprise proof-of-concept environment with Solr and neural search pipeline sandbox upon sales engagement |
+| **[Constructor.io](https://constructor.com/)** | AI-first product discovery and e-commerce search engine optimizing search results and recommendations for business metrics and conversions. | **Enterprise Tier:** Starts at ~$2,000 – $3,500/month (~$24,000 – $42,000/year) based on product catalog SKU size and monthly search/browse query volume | **2-to-4-Week "Proof Schedule" Trial:** Risk-free assessment using real catalog data and user traffic to benchmark conversion lift and relevance before contract |
 Recommended Open-Source Combinations
 
 Traditional + Semantic Hybrid Search
