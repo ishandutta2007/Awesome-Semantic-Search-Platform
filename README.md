@@ -1,1082 +1,249 @@
-# Awesome-Semantic-Search-Platform
+<div align="center">
 
-Markdown
-## Top Semantic Search Platform Ecosystem
+# 🔍 Awesome Semantic Search Platform ⚡
 
+[![Awesome Semantic Search Platform](assets/banner.svg)](#)
 
-**Curated List of SaaS/Hosted Platforms & Open-Source GitHub Projects**  
-*Focused on Semantic Search, Enterprise Search, AI Search, Vector Search, Hybrid Search & Search Relevance*  
-**Last updated: August 2026**
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Semantic-Search-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Semantic-Search-Platform?style=social&color=white" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Semantic-Search-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Semantic-Search-Platform?style=social&color=white" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Semantic-Search-Platform/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Semantic-Search-Platform" alt="Issues"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Semantic-Search-Platform/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
+<p align="center">
+  <strong>Curated ecosystem of SaaS &amp; Open-Source Semantic Search Engines, Vector Databases, Neural Retrieval, Hybrid Search, and Enterprise AI Search Platforms.</strong>
+</p>
 
-This repository tracks notable **SaaS/Hosted Platforms** and **open-source projects** for **Semantic Search**. These platforms help organizations search and retrieve information based on meaning, intent, context, relevance, and relationships rather than relying exclusively on exact keyword matching.
+</div>
 
+---
 
-**Examples** include Algolia, Elasticsearch, Meilisearch, Coveo, Glean, Typesense, Azure AI Search, Vespa, Yext Search, Lucidworks, Constructor, Search.io, Marqo, and Vespa Cloud.
+## 🌟 Overview &amp; Ecosystem
 
+Welcome to the **Awesome Semantic Search Platform** guide! This repository tracks premier **SaaS/Hosted Platforms**, **Open-Source Search Engines**, **Vector Databases**, **Neural Retrieval Frameworks**, and **RAG Search Pipelines**. 
 
-Modern semantic search increasingly combines **lexical search + vector search + embeddings + neural ranking + hybrid retrieval + reranking + personalization + knowledge graphs + RAG + LLM-based query understanding**.
+Unlike legacy search engines that match literal keywords, modern **semantic search systems** evaluate meaning, intent, context, semantics, and relationships. They combine **BM25 lexical search + dense/sparse vector retrieval + neural reranking + learned sparse representations (SPLADE/BGE-M3) + late interaction (ColBERT) + knowledge graphs + LLM query understanding**.
 
+---
 
-**Open-source emphasis**: This repository is heavily expanded with open-source search engines, vector databases, neural retrieval frameworks, indexing libraries, rerankers, embedding frameworks, and search infrastructure. Particularly important projects include **OpenSearch, Vespa, Elasticsearch, Apache Solr, Meilisearch, Typesense, Qdrant, Weaviate, Milvus, Chroma, LanceDB, Tantivy, Lucene, Vald, and ZincSearch**.
+## 📑 Table of Contents
 
+- [🏢 SaaS &amp; Hosted Platforms](#-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🧩 Recommended Open-Source Stacks](#-recommended-open-source-stacks)
+- [🧱 Semantic Search Building Blocks](#-semantic-search-building-blocks)
+- [🔬 Core Search &amp; Retrieval Concepts](#-core-search--retrieval-concepts)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📈 Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
 
-Semantic search is increasingly moving from standalone vector databases toward **hybrid retrieval systems** that combine traditional BM25/lexical retrieval with dense vectors, sparse vectors, metadata filtering, learning-to-rank, and neural reranking. For example, Algolia NeuralSearch combines keyword and vector retrieval, while OpenSearch provides semantic search using embedding models. :contentReference[oaicite:0]{index=0}
+---
 
+## 🏢 SaaS &amp; Hosted Platforms
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites or GitHub repositories.
+The table below is sorted in **descending order by company size** (market capitalization / valuation &amp; annual revenue) and includes transparent starting-tier pricing and specific free tier / free trial limits.
 
+| Platform / Product | Valuation / Revenue (Company Size) | Description | Pricing (Starting Tier) | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Azure AI Search](https://azure.microsoft.com/products/ai-services/ai-search)** | **~$3.1 Trillion** Market Cap / $245B+ Annual Revenue (Microsoft) | Cloud enterprise search service providing keyword, dense/sparse vector search, hybrid retrieval, and AI semantic reranking. | **Basic Tier:** Starts at ~$73.73/month (~$0.101/hour per Search Unit: 1 replica × 1 partition, 2 GB storage, up to 15 indexes); **Standard S1:** ~$245/month | **Free Tier (Free Forever):** 50 MB storage, up to 3 indexes, 1 free search service per Azure subscription (shared infrastructure, semantic ranker excluded) |
+| **[Elasticsearch (Elastic Cloud)](https://www.elastic.co/elasticsearch)** | **~$10.5 Billion** Market Cap / $1.4B Annual Revenue (Elastic - NYSE: ESTC) | Distributed search and analytics engine supporting full-text BM25, dense/sparse vector search, hybrid retrieval, and AI search applications. | **Standard Tier:** Starts at ~$95 – $99/month (~$0.133/hour for entry-level 120 GB storage across 2 AZs); scales with provisioned RAM, vCPU, and storage | **14-Day Free Trial:** 1 hosted deployment (up to 8 GB RAM across 2 AZs), 3 Serverless projects, no credit card required (extendable by 7 days) |
+| **[Elastic AI Search](https://www.elastic.co/enterprise-search)** | **~$10.5 Billion** Market Cap / $1.4B Annual Revenue (Elastic - NYSE: ESTC) | Elastic's AI-native search suite featuring built-in ELSER semantic models, vector search, hybrid retrieval, and RAG connector workflows. | **Standard Tier:** ~$99/month; **Platinum Tier** (includes proprietary ELSER semantic models and ML inference): Starts at ~$125/month (~$0.175/hr) | **14-Day Free Trial:** Full access to vector search, semantic ELSER model deployment, 1 deployment up to 8 GB RAM, 3 Serverless projects |
+| **[Glean](https://www.glean.com/)** | **~$4.6 Billion** Valuation (Series E) / $100M+ ARR | Enterprise AI search and workplace knowledge copilot connecting SaaS apps with semantic understanding and permissions. | **Enterprise Tier:** Starts at ~$50 – $75 per user/month with standard 100-seat minimum commitment (~$50,000 – $60,000/year ACV) + optional $15/user/mo AI add-on | **Guided POC (14 to 30 Days):** No self-serve free tier; provides a guided 14–30 day enterprise sandbox evaluation with connected data sources upon qualification |
+| **[Algolia](https://www.algolia.com/)** | **~$2.25 Billion** Valuation (Series D) / $200M+ ARR | API-first search and discovery platform providing typo tolerance, autocomplete, faceted navigation, personalization, and AI ranking. | **Grow Plan:** $0.50 per 1,000 search requests (includes 100k records; additional records at $0.40/1k records/mo); **Grow Plus:** $1.75 per 1,000 requests | **Free Forever ("Build" Plan):** 10,000 search requests/month, 50,000 records, 5,000 recommendation requests/month, 1 GB data limit, max 10 KB per record |
+| **[Algolia NeuralSearch](https://www.algolia.com/products/features/neuralsearch)** | **~$2.25 Billion** Valuation (Series D) / $200M+ ARR | Hybrid semantic search engine combining keyword matching with vector retrieval, neural ranking, and query understanding. | **Elevate / Premium Tier:** Custom annual enterprise contracts starting at ~$50,000/year (includes NeuralSearch indexing & query pipeline) | **Free Forever ("Build" Plan):** 10,000 search requests/month (keyword/hybrid sandbox); 14-day dedicated AI Search trial upon request |
+| **[Coveo](https://www.coveo.com/)** | **~$900 Million** Market Cap / $130M Annual Revenue (TSX: CVO) | Enterprise AI search and relevance platform delivering semantic understanding, personalization, and generative answering. | **Base / Pro Tier:** Annual contracts starting at ~$2,500/month (~$30,000/year) based on 100,000 queries/month entitlement | **14-Day Free Trial:** Full prototype organization access with standard connectors and ML models; no credit card required (30-day POC for qualified enterprises) |
+| **[Yext Search](https://www.yext.com/)** | **~$850 Million** Market Cap / $400M Annual Revenue (NYSE: YEXT) | AI search engine leveraging knowledge graphs to deliver direct answers and conversational discovery across digital touchpoints. | **Essential Tier:** Starts at ~$199 per location/year (~$16.50/month); Enterprise search deployments start at ~$1,500 – $2,000/month | **14-Day Interactive Sandbox/Trial:** Available via sales-assisted demo request with sample Knowledge Graph configurations and search UI testing |
+| **[Constructor.io](https://constructor.com/)** | **~$550 Million** Valuation (Series B) / $40M+ ARR | AI-first product discovery and e-commerce search platform optimizing results and browse ranking for revenue and conversions. | **Enterprise Tier:** Starts at ~$2,000 – $3,500/month (~$24,000 – $42,000/year) based on product catalog SKU size and monthly search/browse query volume | **2-to-4-Week "Proof Schedule" Trial:** Risk-free assessment using real catalog data and user traffic to benchmark conversion lift and relevance before contract |
+| **[Lucidworks Fusion / Springboard](https://lucidworks.com/)** | **~$370 Million** Valuation / $100M+ ARR | Enterprise search and AI platform combining Apache Solr, neural hybrid search, ML relevance tuning, and generative answers. | **Enterprise Contracts:** Starts at ~$2,500 – $3,500/month (~$30,000 – $42,000/year) based on indexed document volume and search traffic | **14-to-30-Day Guided POC:** Custom enterprise proof-of-concept environment with Solr and neural search pipeline sandbox upon sales engagement |
+| **[Vespa Cloud](https://vespa.ai/)** | **~$175 Million** Valuation / $31M+ Raised | Managed real-time big data search and recommendation engine combining lexical search, vector search, ColBERT, and tensor evaluations. | **Resource-Based Rates:** $0.18/vCPU-hour + $0.018/GB RAM-hour + $0.0007/GB disk-hour (typical entry-level cluster starts at ~$30 – $50/month with autoscaling) | **Free Trial with $300 Credits:** $300 in free cloud usage credits, no credit card required (stops automatically when credits expire; Core engine is Apache 2.0 open-source) |
+| **[Meilisearch Cloud](https://www.meilisearch.com/)** | **~$90 Million** Valuation / $20M+ Raised | Fully managed, developer-friendly search engine with typo tolerance, instant search-as-you-type, and hybrid/vector capabilities. | **Build Plan:** Starts at $30/month (usage/resource-based); **Pro Plan:** Starts at $300/month for production scaling | **14-Day Free Trial:** Full platform access with no credit card required; engine limits allow up to ~4.3B docs/index and 20 MB web upload limit (Open-source is free forever self-hosted) |
+| **[Marqo Cloud](https://marqo.ai/)** | **~$70 Million** Valuation / $17M+ Raised | AI-native vector and multimodal search engine providing end-to-end embedding generation, tensor search, and hybrid ranking. | **Starter Tier:** Starts at ~$0.15/hour (~$108/month) for a dedicated single-replica vector search instance | **Free Evaluation / Sandbox:** $50 free cloud credits or 30-day evaluation with up to 100,000 embeddings (Open-source engine is free forever under Apache 2.0) |
+| **[Typesense Cloud](https://typesense.org/)** | **~$50 Million** Valuation / Bootstrapped &amp; Profitable | Managed instant search engine optimized for fast typo tolerance, vector search, conversational search, and hybrid retrieval. | **Dedicated Nodes:** Starts at ~$7.00 – $7.20/month (~$0.01/hour for 0.5 GB RAM / 1 vCPU entry node); scales with RAM, vCPU, and storage | **30-Day / 720-Hour Free Trial:** Includes 720 hours of cluster runtime and 10 GB outbound bandwidth (one-time allowance; Open-source version is free forever self-hosted) |
 
-## Table of Contents
+---
 
+## 💻 Open-Source GitHub Projects
 
-- [SaaS/Hosted Platforms](#saashosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Additional Strong Open-Source Options](#additional-strong-open-source-options)
-- [Open-Source Semantic Search Stack](#open-source-semantic-search-stack)
-- [Semantic Search Building Blocks](#semantic-search-building-blocks)
-- [Important Semantic Search Concepts](#important-semantic-search-concepts)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+The following curated open-source repositories are **sorted in descending order by GitHub star count**. Each repository includes a real-time star badge linking directly to its stargazers page.
 
+1. **[Elasticsearch](https://github.com/elastic/elasticsearch)** [![GitHub stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers)  
+   Distributed, RESTful search and analytics engine supporting full-text BM25, k-NN dense vector search, sparse vector retrieval, and hybrid search pipelines.
 
-## SaaS/Hosted Platforms
+2. **[Meilisearch](https://github.com/meilisearch/meilisearch)** [![GitHub stars](https://img.shields.io/github/stars/meilisearch/meilisearch?style=social&color=white)](https://github.com/meilisearch/meilisearch/stargazers)  
+   Ultra-fast, typo-tolerant open-source search engine built in Rust, featuring instant search-as-you-type, filtering, and semantic/hybrid search capabilities.
 
-| Platform / Product | Description | Pricing (Starting Tier) | Free Tier / Trial Limits |
-| :--- | :--- | :--- | :--- |
-| **[Algolia](https://www.algolia.com/)** | API-first search and discovery platform providing typo tolerance, autocomplete, faceting, personalization, and hybrid search. | **Grow Plan:** $0.50 per 1,000 search requests (includes 100k records; additional records at $0.40/1k records/mo); **Grow Plus:** $1.75 per 1,000 requests | **Free Forever ("Build" Plan):** 10,000 search requests/month, 50,000 records, 5,000 recommendation requests/month, 1 GB data limit, max 10 KB per record |
-| **[Algolia NeuralSearch](https://www.algolia.com/products/features/neuralsearch)** | Hybrid semantic search combining keyword matching with vector-based retrieval and neural ranking. | **Elevate / Premium Tier:** Custom annual enterprise contracts starting at ~$50,000/year (includes NeuralSearch indexing & query pipeline) | **Free Forever ("Build" Plan):** 10,000 search requests/month (keyword/hybrid sandbox); 14-day dedicated AI Search trial upon request |
-| **[Elasticsearch (Elastic Cloud)](https://www.elastic.co/elasticsearch)** | Distributed search and analytics engine supporting full-text, dense/sparse vector search, hybrid retrieval, and AI search. | **Standard Tier:** Starts at ~$95 – $99/month (~$0.133/hour for entry-level 120 GB storage across 2 AZs); scales with provisioned RAM, vCPU, and storage | **14-Day Free Trial:** 1 hosted deployment (up to 8 GB RAM across 2 AZs), 3 Serverless projects, no credit card required (extendable by 7 days) |
-| **[Elastic AI Search](https://www.elastic.co/enterprise-search)** | Elastic's AI-oriented search ecosystem with lexical + vector search, ELSER semantic models, and generative AI retrieval. | **Standard Tier:** ~$99/month; **Platinum Tier** (includes proprietary ELSER semantic models and ML inference): Starts at ~$125/month (~$0.175/hr) | **14-Day Free Trial:** Full access to vector search, semantic ELSER model deployment, 1 deployment up to 8 GB RAM, 3 Serverless projects |
-| **[Meilisearch Cloud](https://www.meilisearch.com/)** | Fully managed, developer-friendly search engine with typo tolerance, instant search-as-you-type, and hybrid/vector capabilities. | **Build Plan:** Starts at $30/month (usage/resource-based); **Pro Plan:** Starts at $300/month for production scaling | **14-Day Free Trial:** Full platform access with no credit card required; engine limits allow up to ~4.3B docs/index and 20 MB web upload limit (Open-source is free forever self-hosted) |
-| **[Coveo](https://www.coveo.com/)** | Enterprise AI search and relevance platform delivering semantic understanding, personalization, and generative answering. | **Base / Pro Tier:** Annual contracts starting at ~$2,500/month (~$30,000/year) based on 100,000 queries/month entitlement | **14-Day Free Trial:** Full prototype organization access with standard connectors and ML models; no credit card required (30-day POC for qualified enterprises) |
-| **[Glean](https://www.glean.com/)** | Enterprise AI search and work assistant connecting knowledge across all SaaS tools with semantic understanding and permissions. | **Enterprise Tier:** Starts at ~$50 – $75 per user/month with standard 100-seat minimum commitment (~$50,000 – $60,000/year ACV) + optional $15/user/month AI add-on | **Guided POC (14 to 30 Days):** No self-serve free tier; provides a guided 14–30 day enterprise sandbox evaluation with connected data sources upon sales qualification |
-| **[Typesense Cloud](https://typesense.org/)** | Managed instant search engine optimized for fast typo tolerance, vector search, conversational search, and hybrid retrieval. | **Dedicated Nodes:** Starts at ~$7.00 – $7.20/month (~$0.01/hour for 0.5 GB RAM / 1 vCPU entry node); scales with RAM, vCPU, and storage | **30-Day / 720-Hour Free Trial:** Includes 720 hours of cluster runtime and 10 GB outbound bandwidth (one-time allowance; Open-source version is free forever self-hosted) |
-| **[Azure AI Search](https://azure.microsoft.com/products/ai-services/ai-search)** | Cloud search service supporting keyword, dense/sparse vector search, hybrid retrieval, and semantic reranking. | **Basic Tier:** Starts at ~$73.73/month (~$0.101/hour per Search Unit: 1 replica × 1 partition, 2 GB storage, up to 15 indexes); **Standard S1:** ~$245/month | **Free Tier (Free Forever):** 50 MB total storage, up to 3 indexes, 1 free search service per Azure subscription (shared infrastructure, excludes semantic ranker) |
-| **[Vespa Cloud](https://vespa.ai/)** | Managed real-time big data search and recommendation engine combining lexical search, vector search, ColBERT, and tensor evaluations. | **Resource-Based Rates:** $0.18/vCPU-hour + $0.018/GB RAM-hour + $0.0007/GB disk-hour (typical entry-level cluster starts at ~$30 – $50/month with autoscaling) | **Free Trial with $300 Credits:** $300 in free cloud usage credits, no credit card required (stops automatically when credits expire; Core engine is Apache 2.0 open-source) |
-| **[Marqo Cloud](https://marqo.ai/)** | AI-native vector and multimodal search engine providing end-to-end embedding generation, tensor search, and hybrid ranking. | **Starter Tier:** Starts at ~$0.15/hour (~$108/month) for a dedicated single-replica vector search instance | **Free Evaluation / Sandbox:** $50 free cloud credits or 30-day evaluation with up to 100,000 embeddings (Open-source engine is free forever under Apache 2.0) |
-| **[Yext Search](https://www.yext.com/)** | AI-led search platform utilizing knowledge graphs to provide direct, natural-language answers across websites and apps. | **Essential Tier:** Starts at ~$199 per location/year (~$16.50/month); Enterprise search deployments start at ~$1,500 – $2,000/month | **14-Day Interactive Sandbox/Trial:** Available via sales-assisted demo request with sample Knowledge Graph configurations and search UI testing |
-| **[Lucidworks Fusion / Springboard](https://lucidworks.com/)** | Enterprise search and AI platform combining Apache Solr, neural hybrid search, ML relevance tuning, and generative answers. | **Enterprise Contracts:** Starts at ~$2,500 – $3,500/month (~$30,000 – $42,000/year) based on indexed document volume and search traffic | **14-to-30-Day Guided POC:** Custom enterprise proof-of-concept environment with Solr and neural search pipeline sandbox upon sales engagement |
-| **[Constructor.io](https://constructor.com/)** | AI-first product discovery and e-commerce search engine optimizing search results and recommendations for business metrics and conversions. | **Enterprise Tier:** Starts at ~$2,000 – $3,500/month (~$24,000 – $42,000/year) based on product catalog SKU size and monthly search/browse query volume | **2-to-4-Week "Proof Schedule" Trial:** Risk-free assessment using real catalog data and user traffic to benchmark conversion lift and relevance before contract |
-Recommended Open-Source Combinations
+3. **[LlamaIndex](https://github.com/run-llama/llama_index)** [![GitHub stars](https://img.shields.io/github/stars/run-llama/llama_index?style=social&color=white)](https://github.com/run-llama/llama_index/stargazers)  
+   Leading data framework for LLM-based Retrieval-Augmented Generation (RAG), semantic document retrieval, query parsing, and knowledge agent workflows.
 
-Traditional + Semantic Hybrid Search
+4. **[Milvus](https://github.com/milvus-io/milvus)** [![GitHub stars](https://img.shields.io/github/stars/milvus-io/milvus?style=social&color=white)](https://github.com/milvus-io/milvus/stargazers)  
+   Cloud-native vector database built for massive-scale similarity search, supporting billions of high-dimensional dense and sparse vector embeddings.
 
-OpenSearch + Sentence Transformers + BGE Reranker
+5. **[FAISS](https://github.com/facebookresearch/faiss)** [![GitHub stars](https://img.shields.io/github/stars/facebookresearch/faiss?style=social&color=white)](https://github.com/facebookresearch/faiss/stargazers)  
+   Facebook AI Research's fundamental C++ and Python library for efficient similarity search, clustering, IVF/PQ quantization, and GPU-accelerated nearest neighbor search.
 
-Useful for building a production enterprise-search system combining BM25 with dense semantic retrieval and neural reranking.
+6. **[Qdrant](https://github.com/qdrant/qdrant)** [![GitHub stars](https://img.shields.io/github/stars/qdrant/qdrant?style=social&color=white)](https://github.com/qdrant/qdrant/stargazers)  
+   Vector similarity search engine and database written in Rust, offering rich payload-based filtering, multivector search, sparse vectors, and reciprocal rank fusion.
 
-Developer-Friendly Search
+7. **[Chroma](https://github.com/chroma-core/chroma)** [![GitHub stars](https://img.shields.io/github/stars/chroma-core/chroma?style=social&color=white)](https://github.com/chroma-core/chroma/stargazers)  
+   AI-native open-source embedding database designed for developer simplicity, fast local prototyping, and scalable semantic retrieval pipelines.
 
-Typesense + FastEmbed
+8. **[Typesense](https://github.com/typesense/typesense)** [![GitHub stars](https://img.shields.io/github/stars/typesense/typesense?style=social&color=white)](https://github.com/typesense/typesense/stargazers)  
+   Fast, typo-tolerant search engine written in C++, positioning itself as an open-source Algolia alternative with built-in vector search, conversational search, and hybrid retrieval.
 
-Useful for applications requiring fast autocomplete, typo tolerance, filtering, semantic search, and a relatively simple deployment model. Typesense explicitly positions itself as an open-source alternative to Algolia and supports both vector and semantic/hybrid search. 
-typesense.org
-+1
+9. **[Haystack](https://github.com/deepset-ai/haystack)** [![GitHub stars](https://img.shields.io/github/stars/deepset-ai/haystack?style=social&color=white)](https://github.com/deepset-ai/haystack/stargazers)  
+   End-to-end framework by deepset for orchestrating neural search pipelines, hybrid retrieval, agentic search, and multi-stage RAG systems.
 
-High-Scale Semantic Search
+10. **[pgvector](https://github.com/pgvector/pgvector)** [![GitHub stars](https://img.shields.io/github/stars/pgvector/pgvector?style=social&color=white)](https://github.com/pgvector/pgvector/stargazers)  
+    Open-source vector similarity search extension for PostgreSQL, supporting HNSW and IVFFlat indexes with L2 distance, cosine distance, and inner product.
 
-Vespa + Sentence Transformers + ColBERT
+11. **[Sentence Transformers](https://github.com/UKPLab/sentence-transformers)** [![GitHub stars](https://img.shields.io/github/stars/UKPLab/sentence-transformers?style=social&color=white)](https://github.com/UKPLab/sentence-transformers/stargazers)  
+    Python framework for state-of-the-art sentence, text, and image embeddings, bi-encoder similarity calculations, and cross-encoder neural rerankers.
 
-Useful when retrieval, ranking, machine learning, and real-time serving need to operate together at very large scale.
+12. **[ZincSearch](https://github.com/zinclabs/zincsearch)** [![GitHub stars](https://img.shields.io/github/stars/zinclabs/zincsearch?style=social&color=white)](https://github.com/zinclabs/zincsearch/stargazers)  
+    Lightweight, modern alternative to Elasticsearch for full-text indexing, log searching, and structured querying written in Go with minimal resource footprint.
 
-Vector-First Search
+13. **[Weaviate](https://github.com/weaviate/weaviate)** [![GitHub stars](https://img.shields.io/github/stars/weaviate/weaviate?style=social&color=white)](https://github.com/weaviate/weaviate/stargazers)  
+    Open-source, cloud-native vector database offering native hybrid search (BM25 + vector), multi-modal indexing, GraphQL APIs, and custom ML module integrations.
+
+14. **[Tantivy](https://github.com/quickwit-oss/tantivy)** [![GitHub stars](https://img.shields.io/github/stars/quickwit-oss/tantivy?style=social&color=white)](https://github.com/quickwit-oss/tantivy/stargazers)  
+    Full-text search engine library written in Rust, strongly inspired by Apache Lucene and built for extreme indexing and query throughput.
 
-Qdrant + FastEmbed + BGE Reranker
+15. **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)  
+    Community-driven search and analytics suite offering a scalable k-NN vector engine, neural plugins, hybrid score combination, and enterprise security.
 
-Useful for semantic retrieval, RAG, recommendations, and similarity search. Qdrant supports dense, sparse, and multivector search as well as hybrid fusion. 
-GitHub
+16. **[FlagEmbedding (BGE)](https://github.com/FlagOpen/FlagEmbedding)** [![GitHub stars](https://img.shields.io/github/stars/FlagOpen/FlagEmbedding?style=social&color=white)](https://github.com/FlagOpen/FlagEmbedding/stargazers)  
+    State-of-the-art dense retrieval foundation models, multi-stage rerankers (BGE Reranker), and multi-function sparse representations (BGE-M3).
 
-Enterprise Search
+17. **[LanceDB](https://github.com/lancedb/lancedb)** [![GitHub stars](https://img.shields.io/github/stars/lancedb/lancedb?style=social&color=white)](https://github.com/lancedb/lancedb/stargazers)  
+    Serverless, developer-friendly vector database powered by the Lance columnar data format for multi-modal semantic search, low memory usage, and zero-copy retrieval.
 
-OpenSearch + Apache Tika + Sentence Transformers + Reranker
+18. **[Vespa Engine](https://github.com/vespa-engine/vespa)** [![GitHub stars](https://img.shields.io/github/stars/vespa-engine/vespa?style=social&color=white)](https://github.com/vespa-engine/vespa/stargazers)  
+    High-scale big data serving engine for vector search, lexical retrieval, machine learning ranking, tensor computations, and ColBERT late interaction.
 
-Useful for indexing heterogeneous enterprise documents and providing keyword + semantic retrieval.
+19. **[Infinity](https://github.com/infiniflow/infinity)** [![GitHub stars](https://img.shields.io/github/stars/infiniflow/infinity?style=social&color=white)](https://github.com/infiniflow/infinity/stargazers)  
+    AI-native database designed for LLM applications, delivering ultra-fast hybrid retrieval combining dense vector, sparse vector, and full-text search.
 
-RAG Search
+20. **[ColBERT](https://github.com/stanford-futuredata/ColBERT)** [![GitHub stars](https://img.shields.io/github/stars/stanford-futuredata/ColBERT?style=social&color=white)](https://github.com/stanford-futuredata/ColBERT/stargazers)  
+    Stanford's fast and accurate retrieval model based on late interaction over contextualized token embeddings with PLAID index acceleration.
 
-Qdrant + Sentence Transformers + Reranker + LlamaIndex
+21. **[Apache Lucene](https://github.com/apache/lucene)** [![GitHub stars](https://img.shields.io/github/stars/apache/lucene?style=social&color=white)](https://github.com/apache/lucene/stargazers)  
+    The foundational, high-performance open-source search library and inverted index architecture powering Elasticsearch, Apache Solr, and OpenSearch.
 
-Useful for document retrieval and grounding LLM-generated answers.
+22. **[Apache Solr](https://github.com/apache/solr)** [![GitHub stars](https://img.shields.io/github/stars/apache/solr?style=social&color=white)](https://github.com/apache/solr/stargazers)  
+    Enterprise search platform built on Apache Lucene, providing distributed indexing, replication, faceted search, learning-to-rank, and neural query extensions.
 
-Full Open-Source AI Search Platform
+23. **[Vald](https://github.com/vdaas/vald)** [![GitHub stars](https://img.shields.io/github/stars/vdaas/vald?style=social&color=white)](https://github.com/vdaas/vald/stargazers)  
+    Highly scalable, distributed, cloud-native vector search engine built on top of NGT (Neighborhood Graph and Tree) algorithms.
 
-OpenSearch + Sentence Transformers + Qdrant + ColBERT + FastEmbed + Haystack + Apache Kafka + PostgreSQL
+---
 
-This combination can cover lexical retrieval, semantic retrieval, vector search, hybrid search, reranking, ingestion, streaming indexing, metadata, filtering, and RAG.
+## 🧩 Recommended Open-Source Stacks
 
-Semantic Search Building Blocks
-Search Types
+### 1. 🔄 Traditional + Semantic Hybrid Search
+`OpenSearch + Sentence Transformers + BGE Reranker`  
+- **Best for:** Enterprise search combining lexical BM25 precision with dense semantic retrieval and cross-encoder neural reranking.
 
-Semantic Search
+### 2. ⚡ Developer-Friendly Instant Search
+`Typesense + FastEmbed`  
+- **Best for:** Applications requiring instant autocomplete, typo tolerance, faceted filtering, and simple operational deployment.
 
-Keyword Search
+### 3. 🚀 High-Scale Real-Time Semantic Search
+`Vespa + Sentence Transformers + ColBERT`  
+- **Best for:** Workloads requiring real-time document updates, tensor evaluations, multi-stage machine learning ranking, and late-interaction token retrieval.
 
-Full-Text Search
+### 4. 🧠 Vector-First AI &amp; Recommendation Engine
+`Qdrant + FastEmbed + BGE Reranker`  
+- **Best for:** Multimodal semantic retrieval, similarity search, multivector payloads, and reciprocal rank fusion.
 
-Lexical Search
+### 5. 📚 Enterprise Knowledge Retrieval &amp; Document Indexing
+`OpenSearch + Apache Tika + Sentence Transformers + Reranker`  
+- **Best for:** Ingesting diverse enterprise documents (PDFs, docs, emails, tickets) with rich metadata filtering.
 
-Vector Search
+### 6. 🤖 Grounded RAG Search Pipeline
+`Qdrant + Sentence Transformers + BGE Reranker + LlamaIndex / Haystack`  
+- **Best for:** Document retrieval, semantic passage chunking, and grounding LLM-generated responses with source citations.
 
-Dense Retrieval
+---
 
-Sparse Retrieval
+## 🧱 Semantic Search Building Blocks
 
-Hybrid Search
+```mermaid
+flowchart LR
+    A["Raw Data / Documents"] --> B["Chunking & Preprocessing"]
+    B --> C1["BM25 Inverted Index"]
+    B --> C2["Embedding Model (Dense / Sparse)"]
+    C2 --> D["Vector Index (HNSW / IVF)"]
+    E["User Query"] --> F1["Lexical Search"]
+    E --> F2["Query Embedding"]
+    F2 --> G["Vector Search"]
+    C1 --> F1
+    D --> G
+    F1 --> H["Hybrid Rank Fusion (RRF / Score Fusion)"]
+    G --> H
+    H --> I["Cross-Encoder Reranker (BGE / ColBERT)"]
+    I --> J["Top Relevant Results / Grounded LLM Context"]
+```
 
-Neural Search
+### 🔍 Search Types &amp; Paradigms
+- **Semantic Search:** Understanding query intent and context rather than literal matching.
+- **Lexical / Full-Text Search:** Exact keyword and token matching via BM25 / TF-IDF inverted indices.
+- **Vector Search:** Dense vector similarity search in continuous latent embedding spaces.
+- **Hybrid Search:** Fusion of lexical and semantic vector retrieval for optimal precision and recall.
+- **Neural Search:** End-to-end deep learning models for representation and retrieval.
+- **Conversational &amp; Agentic Search:** Multi-turn query rewriting, routing, and tool-augmented agent retrieval.
+- **Multimodal Search:** Cross-modal search across text, images, audio, and video via CLIP/VLM embeddings.
 
-Enterprise Search
+### 📐 Indexing &amp; ANN Algorithms
+- **HNSW (Hierarchical Navigable Small World):** State-of-the-art graph-based approximate nearest neighbor search.
+- **IVF (Inverted File Index):** Fast partition-based clustering for vector indexing.
+- **PQ (Product Quantization):** Lossy vector compression for large-scale memory reduction.
+- **DiskANN:** Graph-based ANN indexing designed to operate directly on SSD storage.
+- **Inverted Index:** Token-to-document posting lists optimized for term frequency and filtering.
 
-AI Search
+### 🎯 Ranking &amp; Fusion Techniques
+- **Reciprocal Rank Fusion (RRF):** Combining ranked lists from heterogeneous retrieval systems without score normalization.
+- **Cross-Encoder Reranking:** Deep transformer scoring of (query, document) pairs for superior precision.
+- **ColBERT Late Interaction:** Token-level similarity matrices evaluated with MaxSim for fine-grained semantic matching.
+- **Learning-to-Rank (LTR) / LambdaMART:** Machine-learned ranking using behavioral signals and click-through data.
 
-Conversational Search
+---
 
-Natural Language Search
+## 🔬 Core Search &amp; Retrieval Concepts
 
-Multimodal Search
+- **Embeddings &amp; Encoders:** Bi-Encoders, Dual Encoders, Sentence Transformers, Matryoshka Embeddings, Contrastive Learning.
+- **Similarity Metrics:** Cosine Similarity, Dot Product (Inner Product), Euclidean Distance ($L_2$).
+- **Query Understanding:** Query Expansion, Query Rewriting, Intent Classification, Spell Correction, Named Entity Recognition (NER), Facet Extraction.
+- **Evaluation Metrics:** NDCG@K, MRR (Mean Reciprocal Rank), Precision@K, Recall@K, MAP (Mean Average Precision), Hit Rate, Latency ($p95/p99$), Throughput (QPS).
 
-Visual Search
+---
 
-Code Search
+## 🤝 How to Contribute
 
-Knowledge Search
+Contributions are welcome! Please follow these guidelines:
 
-Product Search
+1. 🍴 **Fork the repository** on GitHub.
+2. 📝 **Add or update entries** following the established table and list formatting.
+3. 🔎 **Provide accurate information:** Include official links, factual descriptions, specific starting tier pricing, and explicit free tier / free trial limits.
+4. ⭐ **Verify open-source licenses** and active maintenance status before proposing new repositories.
+5. 🚀 **Submit a Pull Request** with a concise description of your additions!
 
-Site Search
+---
 
-Ecommerce Search
+## 📈 Star History
 
-Federated Search
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Semantic-Search-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Semantic-Search-Platform&type=date&legend=top-left)
 
-Distributed Search
+---
 
-Personalized Search
+## ⚖️ Disclaimer
 
-Contextual Search
+*This list is community-curated for informational and educational purposes. Commercial SaaS features, pricing, and free tier allowances may change over time; please verify current specifications directly with the respective vendors. Open-source repositories and licensing models should be reviewed before production deployment.*
 
-Agentic Search
+---
 
-Generative Search
-
-RAG Search
-
-Retrieval
-
-Information Retrieval
-
-Dense Retrieval
-
-Sparse Retrieval
-
-Passage Retrieval
-
-Document Retrieval
-
-Candidate Generation
-
-Nearest Neighbor Search
-
-Approximate Nearest Neighbor
-
-k-NN Search
-
-ANN Search
-
-HNSW
-
-IVF
-
-PQ
-
-DiskANN
-
-ScaNN
-
-FAISS
-
-Vector Similarity
-
-Cosine Similarity
-
-Dot Product
-
-Euclidean Distance
-
-Maximum Inner Product Search
-
-Embeddings
-
-Text Embeddings
-
-Sentence Embeddings
-
-Document Embeddings
-
-Query Embeddings
-
-Dense Embeddings
-
-Multilingual Embeddings
-
-Multimodal Embeddings
-
-Image Embeddings
-
-Code Embeddings
-
-Embedding Models
-
-Embedding Inference
-
-Embedding Fine-Tuning
-
-Matryoshka Embeddings
-
-Contrastive Learning
-
-Bi-Encoder
-
-Dual Encoder
-
-Siamese Networks
-
-Ranking
-
-Relevance Ranking
-
-Learning-to-Rank
-
-LTR
-
-Neural Ranking
-
-Semantic Ranking
-
-Cross-Encoder
-
-Reranking
-
-Two-Stage Retrieval
-
-Multi-Stage Retrieval
-
-Rank Fusion
-
-Reciprocal Rank Fusion
-
-RRF
-
-Score Fusion
-
-Neural Reranker
-
-BGE Reranker
-
-ColBERT
-
-Late Interaction
-
-LambdaMART
-
-BM25
-
-TF-IDF
-
-PageRank
-
-Boosting
-
-Field Boosting
-
-Business Ranking
-
-Dynamic Ranking
-
-Query Understanding
-
-Query Understanding
-
-Query Expansion
-
-Query Rewriting
-
-Query Classification
-
-Query Intent
-
-Intent Detection
-
-Query Parsing
-
-Natural Language Query
-
-Semantic Query
-
-Query Embedding
-
-Query Decomposition
-
-Query Routing
-
-Spell Correction
-
-Typo Tolerance
-
-Synonym Expansion
-
-Entity Extraction
-
-Named Entity Recognition
-
-Filter Extraction
-
-Facet Extraction
-
-Natural Language Filters
-
-Conversational Query Understanding
-
-Indexing
-
-Inverted Index
-
-Vector Index
-
-Dense Index
-
-Sparse Index
-
-Hybrid Index
-
-HNSW Index
-
-IVF Index
-
-PQ Index
-
-ANN Index
-
-Full-Text Index
-
-Geo Index
-
-Facet Index
-
-Metadata Index
-
-Real-Time Indexing
-
-Incremental Indexing
-
-Streaming Indexing
-
-Distributed Indexing
-
-Sharding
-
-Replication
-
-Index Partitioning
-
-Index Compression
-
-Quantization
-
-Search Relevance
-
-Search Relevance
-
-Relevance Tuning
-
-Relevance Engineering
-
-Ranking Optimization
-
-Search Analytics
-
-Click Signals
-
-Conversion Signals
-
-Behavioral Signals
-
-Learning from Search
-
-Personalization
-
-Contextual Ranking
-
-Dynamic Ranking
-
-Business Rules
-
-Merchandising
-
-A/B Testing
-
-Search Evaluation
-
-Offline Evaluation
-
-Online Evaluation
-
-Search UX
-
-Autocomplete
-
-Typeahead
-
-Instant Search
-
-Faceted Search
-
-Filters
-
-Sorting
-
-Pagination
-
-Search Suggestions
-
-Query Suggestions
-
-Related Searches
-
-Recommendations
-
-Search-as-you-Type
-
-Zero Results Handling
-
-No-Results Recovery
-
-Typo Recovery
-
-Spell Suggestions
-
-Search Highlighting
-
-Result Snippets
-
-Search Analytics
-
-Search Personalization
-
-Enterprise Search
-
-Enterprise Search
-
-Knowledge Search
-
-Employee Search
-
-Internal Search
-
-Corporate Search
-
-Federated Enterprise Search
-
-Cross-Application Search
-
-Document Search
-
-Email Search
-
-Wiki Search
-
-Code Search
-
-Ticket Search
-
-CRM Search
-
-SharePoint Search
-
-Confluence Search
-
-Slack Search
-
-Google Drive Search
-
-Knowledge Base Search
-
-Permission-Aware Search
-
-Security-Trimming
-
-Access-Controlled Retrieval
-
-AI Search
-
-AI Search
-
-Neural Search
-
-Semantic Search
-
-Generative Search
-
-Conversational Search
-
-Agentic Search
-
-LLM Search
-
-LLM Retrieval
-
-RAG
-
-Retrieval-Augmented Generation
-
-Retrieval-Augmented Agents
-
-AI Answers
-
-Answer Engine
-
-Search Copilot
-
-Enterprise Copilot
-
-Knowledge Assistant
-
-Grounded Generation
-
-Citation-Aware Retrieval
-
-Tool-Augmented Search
-
-Multimodal Search
-
-Multimodal Search
-
-Text-to-Image Search
-
-Image-to-Image Search
-
-Image-to-Text Search
-
-Text-to-Video Search
-
-Video Search
-
-Audio Search
-
-Document Search
-
-Cross-Modal Retrieval
-
-Multimodal Embeddings
-
-CLIP
-
-Vision-Language Models
-
-Visual Similarity Search
-
-Knowledge Graph Search
-
-Knowledge Graph
-
-Graph Search
-
-Graph Retrieval
-
-Graph RAG
-
-Entity Linking
-
-Entity Resolution
-
-Relationship Search
-
-Graph Embeddings
-
-Knowledge Extraction
-
-Ontology
-
-Taxonomy
-
-Semantic Relationships
-
-Entity-Centric Search
-
-Search Infrastructure
-
-Search Engine
-
-Vector Database
-
-Vector Index
-
-Embedding Database
-
-Search API
-
-Search SDK
-
-Search Cluster
-
-Distributed Search
-
-Search Sharding
-
-Search Replication
-
-Search Caching
-
-Query Caching
-
-Embedding Cache
-
-Search Observability
-
-Search Monitoring
-
-Search Analytics
-
-Search Evaluation
-
-Search Latency
-
-Search Throughput
-
-Search Scalability
-
-Open-Source Semantic Search
-
-Open-Source Search
-
-Open-Source Semantic Search
-
-Open-Source Vector Search
-
-Open-Source Hybrid Search
-
-Open-Source Enterprise Search
-
-Open-Source AI Search
-
-Open-Source Neural Search
-
-Open-Source RAG
-
-Open-Source Search Engine
-
-Open-Source Vector Database
-
-Self-Hosted Search
-
-Self-Hosted Semantic Search
-
-Self-Hosted Vector Search
-
-Self-Hosted Enterprise Search
-
-Offline Semantic Search
-
-Local Semantic Search
-
-Private AI Search
-
-On-Premise Search
-
-Air-Gapped Search
-
-AI Agents & Semantic Search
-
-Agentic Search
-
-Search Agents
-
-AI Search Agents
-
-Retrieval Agents
-
-Research Agents
-
-Enterprise Search Agents
-
-RAG Agents
-
-Multi-Agent Retrieval
-
-Query Planning
-
-Query Routing
-
-Tool-Using Search
-
-MCP Search
-
-MCP Retrieval
-
-Agentic RAG
-
-Agentic Retrieval
-
-Autonomous Search
-
-Search Copilots
-
-Knowledge Agents
-
-Important Semantic Search Concepts
-
-Semantic Search
-
-Vector Search
-
-Hybrid Search
-
-Neural Search
-
-Dense Retrieval
-
-Sparse Retrieval
-
-BM25
-
-TF-IDF
-
-Embeddings
-
-Sentence Embeddings
-
-Document Embeddings
-
-Query Embeddings
-
-Vector Database
-
-Vector Index
-
-ANN
-
-HNSW
-
-IVF
-
-PQ
-
-DiskANN
-
-ScaNN
-
-FAISS
-
-Approximate Nearest Neighbor
-
-Cosine Similarity
-
-Dot Product
-
-Euclidean Distance
-
-Maximum Inner Product
-
-Cross-Encoder
-
-Bi-Encoder
-
-Reranking
-
-Neural Reranking
-
-ColBERT
-
-Late Interaction
-
-Learning-to-Rank
-
-LambdaMART
-
-Rank Fusion
-
-Reciprocal Rank Fusion
-
-Score Fusion
-
-Query Expansion
-
-Query Rewriting
-
-Query Understanding
-
-Intent Detection
-
-Natural Language Search
-
-Semantic Query
-
-Query Classification
-
-Query Routing
-
-Spell Correction
-
-Typo Tolerance
-
-Synonym Expansion
-
-Entity Linking
-
-Named Entity Recognition
-
-Knowledge Graph
-
-Graph Search
-
-Graph RAG
-
-Knowledge Retrieval
-
-Enterprise Search
-
-Federated Search
-
-Permission-Aware Search
-
-Security-Trimming
-
-Personalized Search
-
-Contextual Search
-
-Behavioral Ranking
-
-Search Relevance
-
-Relevance Engineering
-
-Search Analytics
-
-Search Evaluation
-
-A/B Testing
-
-Search Merchandising
-
-Search Recommendations
-
-Autocomplete
-
-Typeahead
-
-Faceted Search
-
-Instant Search
-
-Search-as-You-Type
-
-Conversational Search
-
-Generative Search
-
-AI Search
-
-Agentic Search
-
-RAG
-
-Retrieval-Augmented Generation
-
-Retrieval-Augmented Agents
-
-AI Answers
-
-Answer Engine
-
-Search Copilot
-
-Enterprise Copilot
-
-Grounded Generation
-
-Citation-Aware Retrieval
-
-Multimodal Search
-
-Visual Search
-
-Image Retrieval
-
-Video Retrieval
-
-Audio Retrieval
-
-Cross-Modal Retrieval
-
-Multimodal Embeddings
-
-CLIP
-
-Vision-Language Models
-
-Document Retrieval
-
-Passage Retrieval
-
-Chunking
-
-Semantic Chunking
-
-Document Parsing
-
-Metadata Filtering
-
-Hybrid Retrieval
-
-Multi-Stage Retrieval
-
-Candidate Generation
-
-Recall
-
-Precision
-
-MRR
-
-NDCG
-
-MAP
-
-Hit Rate
-
-Recall@K
-
-Precision@K
-
-Latency
-
-Throughput
-
-Indexing Throughput
-
-Query Latency
-
-Search Scalability
-
-Distributed Search
-
-Search Sharding
-
-Search Replication
-
-Real-Time Search
-
-Streaming Indexing
-
-Incremental Indexing
-
-Index Compression
-
-Vector Quantization
-
-Product Quantization
-
-Binary Quantization
-
-Embedding Quantization
-
-Embedding Fine-Tuning
-
-Contrastive Learning
-
-Hard Negative Mining
-
-Retrieval Fine-Tuning
-
-Domain Adaptation
-
-Multilingual Retrieval
-
-Cross-Lingual Search
-
-Long-Context Retrieval
-
-Contextual Retrieval
-
-Hierarchical Retrieval
-
-Parent-Child Retrieval
-
-Recursive Retrieval
-
-Multi-Vector Retrieval
-
-Sparse-Dense Fusion
-
-Learned Sparse Retrieval
-
-SPLADE
-
-Knowledge-Enhanced Retrieval
-
-Graph-Enhanced Retrieval
-
-Agentic Retrieval
-
-MCP Retrieval
-
-Local AI Search
-
-Private AI Search
-
-Self-Hosted Semantic Search
-
-Open-Source Semantic Search
-
-How to Contribute
-
-Fork the repo.
-
-Add/edit entries in README.md (follow the existing format).
-
-Include: name, official link or GitHub repository, 1–2 sentence description, and whether it is SaaS/hosted or open-source.
-
-For open-source projects, identify the primary capability — search engine, vector database, hybrid search, embeddings, reranking, RAG, crawling, indexing, or search UI.
-
-Clearly distinguish open-source, source-available, open-core, managed SaaS, and proprietary products.
-
-Verify the current license before adding an open-source entry.
-
-Prefer actively maintained repositories with meaningful documentation and recent development.
-
-Do not describe a vector database, embedding library, or RAG framework as a complete Algolia/Coveo/Glean replacement unless it actually provides comparable search functionality.
-
-For search-specific entries, prioritize functionality such as semantic retrieval, vector search, hybrid search, relevance ranking, query understanding, enterprise connectors, filtering, personalization, or search analytics.
-
-Submit a PR with a short explanation.
-
-Star the repo if you find it useful!
-
-Disclaimer
-
-This is a community-curated list — not exhaustive and not an endorsement.
-
-The semantic-search market changes rapidly, particularly around vector databases, AI search, neural ranking, and agentic retrieval.
-
-Some projects listed here are complete search engines, while others are vector databases, search libraries, embedding frameworks, rerankers, crawlers, RAG frameworks, or infrastructure components.
-
-Typesense, Meilisearch, OpenSearch, Vespa, Elasticsearch, Apache Solr, and Qdrant should not be treated as identical products; they occupy different positions across lexical search, semantic search, vector search, enterprise search, and developer infrastructure. Meilisearch's own comparison documentation likewise distinguishes these categories and licensing models. 
-Meilisearch
-+1
-
-Semantic search quality depends heavily on embedding models, chunking, metadata, retrieval strategy, reranking, query understanding, and evaluation methodology.
-
-Vector similarity alone is not necessarily equivalent to high-quality semantic search. Production systems often combine lexical retrieval, semantic retrieval, filtering, and reranking.
-
-Always verify the current license, maintenance status, documentation, security posture, supported deployment model, and feature availability before adopting an open-source project.
-
-Search systems handling enterprise data should implement appropriate authentication, authorization, access-control filtering, encryption, audit logging, and data isolation.
-
-AI-generated search answers should be grounded in retrieved source material and independently evaluated for accuracy.
-
-Commercial platform features and pricing can change over time. Verify current capabilities with the vendor before making procurement decisions.
-
-Made for search engineers, AI engineers, ML engineers, developers, enterprise architects, knowledge-management teams, ecommerce teams, and researchers.
-Let's make semantic search more open, intelligent, relevant, scalable, interoperable, explainable, and accessible.
+<div align="center">
+  <sub>Maintained with ❤️ by the open-source search and AI community.</sub>
+</div>

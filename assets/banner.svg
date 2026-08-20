@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a">
+        <animate attributeName="stop-color" values="#0a0e1a;#0f172a;#0a0e1a" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#0f172a">
+        <animate attributeName="stop-color" values="#0f172a;#1e1b4b;#0f172a" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#020617">
+        <animate attributeName="stop-color" values="#020617;#0b0f19;#020617" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Glowing Vector Gradients -->
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Wave animations and vector effects -->
+    <style>
+      @keyframes pulseNode {
+        0%, 100% { r: 5; opacity: 0.7; }
+        50% { r: 8; opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      }
+      @keyframes floatVector {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(1deg); }
+      }
+      @keyframes shimmerWave {
+        0% { stroke-dashoffset: 1000; opacity: 0.3; }
+        50% { opacity: 0.8; }
+        100% { stroke-dashoffset: 0; opacity: 0.3; }
+      }
+      @keyframes orbGlow {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.4; }
+        50% { transform: scale(1.15) translate(-20px, 10px); opacity: 0.7; }
+      }
+      .node-1 { animation: pulseNode 3s infinite ease-in-out; }
+      .node-2 { animation: pulseNode 4s infinite ease-in-out 1s; }
+      .node-3 { animation: pulseNode 3.5s infinite ease-in-out 0.5s; }
+      .vector-grid { animation: floatVector 6s infinite ease-in-out; }
+      .shimmer-line { stroke-dasharray: 200, 20; animation: shimmerWave 12s linear infinite; }
+      .ambient-orb { animation: orbGlow 8s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="100" r="140" fill="#4f46e5" opacity="0.25" filter="url(#glow)" class="ambient-orb" />
+  <circle cx="1000" cy="260" r="160" fill="#06b6d4" opacity="0.2" filter="url(#glow)" class="ambient-orb" />
+  <circle cx="600" cy="180" r="120" fill="#9333ea" opacity="0.15" filter="url(#glow)" class="ambient-orb" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="750" y1="0" x2="750" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1050" y1="0" x2="1050" y2="360" />
+  </g>
+
+  <!-- Semantic Vector Network Graph (Right/Background) -->
+  <g class="vector-grid">
+    <!-- Connecting Vector Lines -->
+    <path d="M 850 70 L 980 120 L 1100 80 L 1040 220 L 920 280 L 820 190 Z" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.4" class="shimmer-line" />
+    <path d="M 980 120 L 920 280 M 850 70 L 1040 220 M 1100 80 L 820 190" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" />
+    <path d="M 720 140 L 850 70 M 720 140 L 820 190 M 1040 220 L 1150 290" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.35" />
+
+    <!-- Vector Embedding Nodes -->
+    <circle cx="850" cy="70" r="5" fill="#38bdf8" class="node-1" filter="url(#softGlow)" />
+    <circle cx="980" cy="120" r="6" fill="#818cf8" class="node-2" filter="url(#softGlow)" />
+    <circle cx="1100" cy="80" r="5" fill="#c084fc" class="node-3" filter="url(#softGlow)" />
+    <circle cx="1040" cy="220" r="7" fill="#38bdf8" class="node-2" filter="url(#softGlow)" />
+    <circle cx="920" cy="280" r="5.5" fill="#ec4899" class="node-1" filter="url(#softGlow)" />
+    <circle cx="820" cy="190" r="6" fill="#6366f1" class="node-3" filter="url(#softGlow)" />
+    <circle cx="720" cy="140" r="4.5" fill="#38bdf8" class="node-1" filter="url(#softGlow)" />
+    <circle cx="1150" cy="290" r="5" fill="#818cf8" class="node-2" filter="url(#softGlow)" />
+
+    <!-- Node Dimension Labels -->
+    <text x="862" y="65" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" opacity="0.7">d[0..1536]</text>
+    <text x="992" y="115" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" opacity="0.7">BM25 + Dense</text>
+    <text x="1052" y="235" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" opacity="0.7">Neural Rerank</text>
+  </g>
+
+  <!-- Left Content / Title Area -->
+  <g transform="translate(80, 0)">
+    <!-- Badge / Subtitle Pill -->
+    <g transform="translate(0, 58)">
+      <rect width="260" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.85" />
+      <circle cx="14" cy="14" r="4" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="26" y="18" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">CURATED ECOSYSTEM 2026</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Awesome <tspan fill="url(#accentCyan)">Semantic Search</tspan>
+    </text>
+    <text x="0" y="188" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Platform
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="230" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      The definitive directory for SaaS Platforms, Open-Source Engines, Vector Databases,
+    </text>
+    <text x="0" y="254" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      Hybrid Retrieval Systems, Embeddings, Neural Rerankers &amp; Enterprise AI Search.
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 280)">
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8" />
+      <text x="12" y="17" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">⚡ Hybrid Search</text>
+
+      <rect x="140" y="0" width="130" height="26" rx="6" fill="#082f49" stroke="#0284c7" stroke-width="0.8" />
+      <text x="152" y="17" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🧠 Vector Search</text>
+
+      <rect x="280" y="0" width="145" height="26" rx="6" fill="#2e1065" stroke="#9333ea" stroke-width="0.8" />
+      <text x="292" y="17" fill="#d8b4fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🎯 Neural Reranking</text>
+
+      <rect x="435" y="0" width="115" height="26" rx="6" fill="#14532d" stroke="#16a34a" stroke-width="0.8" />
+      <text x="447" y="17" fill="#86efac" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">🏢 Enterprise RAG</text>
+    </g>
+  </g>
+
+  <!-- Border Highlight -->
+  <rect width="1200" height="360" rx="16" fill="none" stroke="url(#accentCyan)" stroke-width="1.5" opacity="0.3" />
+</svg>
